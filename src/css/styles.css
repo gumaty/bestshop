@@ -161,18 +161,12 @@ html, body {
 }
 
 .stats__content {
+    width: 100%;
+    max-width: 11rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 6.3125rem 0 0 0;
-}
-
-.stats__content--blue {
-    max-width: 11rem;
-}
-
-.stats__content--green {
-    max-width: 10.1875rem;
 }
 
 .content__circle {
@@ -229,7 +223,7 @@ html, body {
 .leads {
     background-color: var(--white);
     box-sizing: border-box;
-    margin: 0 0 7.5625rem 0;
+    margin: 0 0 6.25rem 0;
 }
 
 .leads .leads__inner {
@@ -394,14 +388,12 @@ html, body {
 .pricing .pricing__inner {
     width: 100%;
     box-sizing: border-box;
-    padding-top: 6.5625rem;
-    background-color: var(--white-dark);
+    background-color: var(--white);
     max-width: var(--max-width);
     display: flex;
     margin-inline: auto;
     flex-direction: column;
     align-items: center;
-    margin-top: -5rem;
 }
 
 .pricing .pricing__hdl {
@@ -415,17 +407,21 @@ html, body {
 }
 
 .pricing .priceList {
+    width: 100%;
+
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
     column-gap: 3.625rem;
 }
 
 .pricing .pricing__option {
     box-sizing: border-box;
-    width: 23.25rem;
-    padding: 2.125rem;
+    width: 100%;
+    max-width: 23.25rem;
+    height: calc(100% * 1.24);
     position: relative;
     background: var(--white);
     border: 0.0625rem solid var(--pink-3);
@@ -434,6 +430,9 @@ html, body {
 }
 
 .pricing .pricing__option.pricing__option--pro {
+    width: 100%;
+    max-width: 25.3125rem;
+
     border: 0.0625rem solid var(--blue-light);
     box-shadow: 0.3125rem 0.625rem 1.6875rem var(--green-light);
 }
@@ -446,7 +445,7 @@ html, body {
     font: normal normal bold 1.25rem/0.0625rem Raleway;
     letter-spacing: 0;
     color: var(--gray-6);
-    margin: 0 0 2.875rem 0;
+    margin: 2.125rem 0 2.875rem 0;
 }
 .pricing__option .option__price {
     font: normal normal 300 2.875rem/0.125rem Open Sans;
@@ -489,7 +488,6 @@ html, body {
     color: var(--black);
     margin: 0 0 1.25rem 0;
 }
-
 .pricing__option .option__emails {
     font-size: 0.875rem;
     line-height: 2.5625;
@@ -515,7 +513,7 @@ html, body {
     font-family: 'Open Sans', sans-serif;
     letter-spacing: 0;
     color: var(--black);
-    margin: 0 0 1.25rem 0;
+    margin: 0 0 5.0625rem 0;
 }
 .pricing__option .pricing__btn {
     position: absolute;
@@ -524,7 +522,7 @@ html, body {
     transform: translate(-50%, 50%);
     display: inline-block;
     background: #EB476E;
-    padding: 1rem 3.5625rem;
+    padding: 0.53125rem 3.5625rem;
     border-radius: 1.4375rem;
     font-size: 0.8125rem;
     line-height: 2.5625;
@@ -535,12 +533,16 @@ html, body {
 }
 .pricing__option .pricing__btn.pricing__btn--pro {
     background-color: var(--blue-light);
+    padding: 0.53125rem 4rem;
 }
 
 .pricing__option .pricing__btn.pricing__btn--premium {
     background-color: var(--green-dark);
 }
 
-.pricing__option--pro.biggerSmallMargin {
+.pricing__option--pro .biggerSmallMargin {
     margin: 0 0 1.5625rem 0;
+}
+.pricing__option--pro .biggerRemarkMargin {
+    margin: 0 0 4.1875rem 0;
 }
