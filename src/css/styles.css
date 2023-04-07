@@ -156,6 +156,7 @@ html, body {
     width: 100%;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     column-gap: 11.5rem;
 }
 
@@ -385,3 +386,161 @@ html, body {
     margin: 6.125rem 5.125rem 4rem 3.875rem;
 }
 
+.pricing {
+    background-color: var(--white);
+    box-sizing: border-box;
+    margin: 0 0 7.5625rem 0;
+}
+.pricing .pricing__inner {
+    width: 100%;
+    box-sizing: border-box;
+    padding-top: 6.5625rem;
+    background-color: var(--white-dark);
+    max-width: var(--max-width);
+    display: flex;
+    margin-inline: auto;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -5rem;
+}
+
+.pricing .pricing__hdl {
+    color: var(--black);
+    font-size: 2.25rem;
+    line-height: 1.1666;
+    letter-spacing: 0rem;
+    font-weight: 400;
+    font-family: 'Raleway', sans-serif;
+    margin: 0 0 1.875rem 0;
+}
+
+.pricing .priceList {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 3.625rem;
+}
+
+.pricing .pricing__option {
+    box-sizing: border-box;
+    width: 23.25rem;
+    padding: 2.125rem;
+    position: relative;
+    background: var(--white);
+    border: 0.0625rem solid var(--pink-3);
+    border-radius: 1.125rem;
+    text-align: center;
+}
+
+.pricing .pricing__option.pricing__option--pro {
+    border: 0.0625rem solid var(--blue-light);
+    box-shadow: 0.3125rem 0.625rem 1.6875rem var(--green-light);
+}
+
+.pricing .pricing__option.pricing__option--premium {
+    border: 0.0625rem solid var(--green-dark);
+}
+
+.pricing__option .option__name {
+    font: normal normal bold 1.25rem/0.0625rem Raleway;
+    letter-spacing: 0;
+    color: var(--gray-6);
+    margin: 0 0 2.875rem 0;
+}
+.pricing__option .option__price {
+    font: normal normal 300 2.875rem/0.125rem Open Sans;
+    letter-spacing: 0;
+    color: var(--pink-3);
+    margin: 0 0 1.875rem 0;
+}
+
+.pricing__option .option__price.option__price--pro {
+    color: var(--blue-light);
+}
+.pricing__option .option__price.option__price--premium {
+    color: var(--green-dark);
+}
+
+.pricing__option .option__remark {
+    font-size: 0.75rem;
+    line-height: 0.0625;
+    font-weight: 700;
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 0;
+    color: var(--gray-6);
+    margin: 0 0 3.5rem 0;
+}
+.pricing__option .option__capacity {
+    font-size: 0.875rem;
+    line-height: 2.5625;
+    font-weight: 400;
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: 0;
+    color: var(--black);
+    margin: 0 0 1.25rem 0;
+}
+.pricing__option .option__domains {
+    font-size: 0.875rem;
+    line-height: 2.5625;
+    font-weight: 400;
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: 0;
+    color: var(--black);
+    margin: 0 0 1.25rem 0;
+}
+
+.pricing__option .option__emails {
+    font-size: 0.875rem;
+    line-height: 2.5625;
+    font-weight: 400;
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: 0;
+    color: var(--black);
+    margin: 0 0 1.25rem 0;
+}
+.pricing__option .option__licensing {
+    font-size: 0.875rem;
+    line-height: 2.5625;
+    font-weight: 400;
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: 0;
+    color: var(--black);
+    margin: 0 0 1.25rem 0;
+}
+.pricing__option .option__support {
+    font-size: 0.875rem;
+    line-height: 2.5625;
+    font-weight: 400;
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: 0;
+    color: var(--black);
+    margin: 0 0 1.25rem 0;
+}
+.pricing__option .pricing__btn {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    display: inline-block;
+    background: #EB476E;
+    padding: 1rem 3.5625rem;
+    border-radius: 1.4375rem;
+    font-size: 0.8125rem;
+    line-height: 2.5625;
+    font-weight: 700;
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: 0;
+    color: var(--white);
+}
+.pricing__option .pricing__btn.pricing__btn--pro {
+    background-color: var(--blue-light);
+}
+
+.pricing__option .pricing__btn.pricing__btn--premium {
+    background-color: var(--green-dark);
+}
+
+.pricing__option--pro.biggerSmallMargin {
+    margin: 0 0 1.5625rem 0;
+}
