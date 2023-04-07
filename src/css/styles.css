@@ -67,6 +67,7 @@ html, body {
     font-family: 'Open Sans', sans-serif;
     letter-spacing: 0.205rem;
     text-transform: uppercase;
+    transition: all 400ms ease-in-out;
 }
 
 .menu__item:hover {
@@ -119,12 +120,18 @@ html, body {
     line-height: 1.375;
     font-weight: 400;
     box-shadow: 0.3125rem .625rem 0.875rem var(--green-light);
+    transition: all 400ms ease-in-out;
+}
+
+.hero .hero__inner .hero__btn:hover {
+    color: var(--blue-dark);
+    background-color: var(--white);
 }
 
 .stats {
     background-color: var(--white);
     box-sizing: border-box;
-    margin: 0 0 7.5625rem 0;
+    margin: 0 0 14.125rem 0;
 }
 .stats .stats__inner {
     width: 100%;
@@ -217,3 +224,165 @@ html, body {
     text-align: center;
     margin:0;
 }
+
+.leads {
+    background-color: var(--white);
+    box-sizing: border-box;
+    margin: 0 0 7.5625rem 0;
+}
+
+.leads .leads__inner {
+    width: 100%;
+    box-sizing: border-box;
+    padding-top: 105px;
+    background-color: #F7F7F7;
+    max-width: var(--max-width);
+    display: flex;
+    margin-inline: auto;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -5rem;
+
+}
+.leads__inner .leads__content {
+    width: 1124px;
+    margin:0 0 37px 0;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #E8E9ED;
+    border-radius: 5px;
+}
+
+.leads__inner .leads__content.leads__content--right {
+    flex-direction: row-reverse;
+}
+.leads__inner .leads__content.leads__content--transparent {
+    background-color: transparent;
+    column-gap: 61px;
+    border: 0;
+}
+
+.leads__inner .content__leadText {
+    position: relative;
+    width: 416px;
+    margin: 91px 35px;
+}
+
+.leads__inner .content__leadText:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 4px;
+    width: 79%;
+    border-bottom: 4px solid #FB3B64;
+}
+
+.leads__inner .content__leadText.content__leadText--right {
+    margin: 70px 20px;
+}
+
+.leads__inner .content__leadText.content__leadText--right:before {
+    border-bottom: 4px solid #08A6E4;
+}
+
+.leads__inner .content__leadText.content__leadText--transparent {
+    margin: 0;
+    background: #FFFFFF;
+    border: 1px solid #E8E9ED;
+    border-radius: 5px;
+    padding: 70px 35px;
+
+}
+
+.leads__inner .content__leadText.content__leadText--transparent:before {
+    width: 60%;
+    border-bottom: 4px solid #55DFB4;
+}
+
+.leads__inner .img_container {
+    position: relative;
+}
+
+.img_container .content__leadImgSquare {
+    position: absolute;
+    display: block;
+    top: 75px;
+    right: 108px;
+    width: 180px;
+    height: 180px;
+    transform: rotate(45deg);
+    background: #FB3B64;
+    border-radius: 41px;
+    z-index: 10;
+}
+
+.img_container .content__leadImgCircle {
+    position: absolute;
+    /*display: block;*/
+    top: 12px;
+    left: 70px;
+    width: 320px;
+    height: 320px;
+    background: #07ACE6;
+    border-radius: 50%;
+}
+
+.img_container .content__leadImg {
+    position: absolute;
+    z-index: 1000;
+    bottom: 38px;
+    right: 117.56px;
+
+}
+
+.img_container .content__leadImg.content__leadImg--left {
+    position: absolute;
+    z-index: 1000;
+    bottom: 13px;
+    left: 70px;
+
+}
+
+.leads .lead__hdl {
+    color: var(--black);
+    font-size: 2.25rem;
+    line-height: 1.1666;
+    letter-spacing: 0rem;
+    font-weight: 400;
+    font-family: 'Raleway', sans-serif;
+    margin: 0 0 1.875rem 0;
+}
+.lead__text {
+    font-size: 1rem;
+    line-height: 1.375rem;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    letter-spacing: 0px;
+    color: #000000;
+    margin: 0 0 50px 0;
+}
+
+.lead__text.lead__text--lower{
+    margin: 0 0 44px 0;
+}
+
+.content__leadImg.leads__content--transparent {}
+
+.leads__content .content__text {
+    background: #FFFFFF;
+    border: 1px solid #E8E9ED;
+    border-radius: 5px;
+    margin: 0;
+}
+
+.leads__content .content__img {
+    background: #55DFB4;
+    border: 1px solid #E8E9ED;
+    border-radius: 5px;
+}
+.content__img .content__leadImg {
+    margin: 98px 82px 64px 62px;
+}
+
