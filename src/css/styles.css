@@ -712,6 +712,49 @@ html, body {
     cursor: pointer;
 }
 
+.footer {
+    background-color: #F7F7F7;
+    box-shadow: 0px -5px 40px #00000029;
+    margin-top: 59px;
+}
+.footer .footer__inner {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.footer__inner .footer__left {}
+.footer__inner .footer__right {
+    display: flex;
+    align-self: center;
+    column-gap: 20px;
+}
+.footer__left .logo {
+    font-family: 'Raleway', sans-serif;
+    font-size: 26px;
+    line-height: 1.1538;
+    font-weight: 300;
+    letter-spacing: 0;
+    color: #08A6E4;
+    margin:0;
+    padding: 20px 0 7px 0;
+}
+.footer__left .copyright {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 11px;
+    line-height: 1.3636;
+    font-weight: 400;
+    letter-spacing: 0;
+    color: #A5A5A5;
+    margin:0;
+    padding: 0 0 17px 0;
+}
+
+.footer__right .logo__outer {
+    display: block;
+}
+
+
 /* stara wersja */
 
 .checkbox__lbl {
@@ -752,58 +795,3 @@ html, body {
 }
 
 
-/* nowa wersja */
-/*.contactForm__checkbox {*/
-/*    display: flex;*/
-/*    flex-direction: row;*/
-/*    align-items: flex-start;*/
-/*    margin: 0 0 30px 0;*/
-/*}*/
-
-/*.contactForm__checkbox .checkbox__input {*/
-/*    padding: 0;*/
-/*    height: initial;*/
-/*    width: initial;*/
-/*    margin-bottom: 0;*/
-/*    display: none;*/
-/*    cursor: pointer;*/
-/*}*/
-
-/*.contactForm__checkbox .checkbox__lbl {*/
-/*    position: relative;*/
-/*    margin: 0 0 30px 0;*/
-/*    font-family: 'Open Sans', sans-serif;*/
-/*    font-size: 12px;*/
-/*    font-weight: 400;*/
-/*    line-height: 1.4167;*/
-/*    color: #707070;*/
-/*    cursor: pointer;*/
-/*}*/
-
-/*.contactForm__checkbox .checkbox__lbl:before {*/
-/*    content:'';*/
-/*    background-color: transparent;*/
-/*    content: '';*/
-/*    margin-right: 10px;*/
-/*    width: 100%;*/
-/*    max-width:24px;*/
-/*    height: 24px;*/
-/*    border: 1px solid #D1D1D1;*/
-/*    border-radius: 8px;*/
-/*    display: inline-block;*/
-/*    position: relative;*/
-/*    vertical-align: middle;*/
-/*}*/
-
-/*.contactForm__checkbox .checkbox__input:checked + .checkbox__lbl:after {*/
-/*    content: '';*/
-/*    display: block;*/
-/*    position: absolute;*/
-/*    top: 2px;*/
-/*    left: 9px;*/
-/*    width: 6px;*/
-/*    height: 14px;*/
-/*    border: solid #0079bf;*/
-/*    border-width: 0 2px 2px 0;*/
-/*    transform: rotate(45deg);*/
-/*}*/
