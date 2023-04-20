@@ -1,0 +1,167 @@
+.pricing {
+  background-color: $white;
+  margin: 0 0 7.5625rem 0;
+
+  .pricing__inner {
+    width: 100%;
+    background-color: $white;
+    max-width: $max-width;
+    display: flex;
+    margin-inline: auto;
+    flex-direction: column;
+    align-items: center;
+
+    .pricing__hdl {
+      color: $black;
+      font-size: 2.25rem;
+      line-height: 1.1666;
+      letter-spacing: 0rem;
+      font-weight: 400;
+      font-family: $font-raleway;
+      margin: 0 0 1.875rem 0;
+    }
+
+    .priceList {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      column-gap: 3.625rem;
+
+      .pricing__option {
+        box-sizing: border-box;
+        width: 100%;
+        max-width: 23.25rem;
+        height: calc(100% * 1.24);
+        position: relative;
+        background: $white;
+        border: 0.0625rem solid $pink-3;
+        border-radius: 1.125rem;
+        text-align: center;
+
+        &.pricing__option--pro {
+          width: 100%;
+          max-width: 25.3125rem;
+          border: 0.0625rem solid $blue-light;
+          box-shadow: 0.3125rem 0.625rem 1.6875rem $green-light;
+
+          &.biggerSmallMargin {
+            margin: 0 0 1.5625rem 0;
+          }
+        }
+
+        &.pricing__option--premium {
+          border: 0.0625rem solid $green-dark;
+
+          &.biggerRemarkMargin {
+            margin: 0 0 4.1875rem 0;
+          }
+        }
+
+        .option__name {
+          font: normal normal bold 1.25rem/0.0625rem Raleway;
+          letter-spacing: 0;
+          color: $gray-6;
+          margin: 2.125rem 0 2.875rem 0;
+        }
+
+        .option__price {
+          font: normal normal 300 2.875rem/0.125rem Open Sans;
+          letter-spacing: 0;
+          color: $pink-3;
+          margin: 0 0 1.875rem 0;
+
+          &.option__price--pro {
+            color: $blue-light;
+          }
+
+          &.option__price--premium {
+            color: $green-dark;
+          }
+        }
+
+        .option__remark {
+          font-size: 0.75rem;
+          line-height: 0.0625;
+          font-weight: 700;
+          font-family: $font-raleway;
+          letter-spacing: 0;
+          color: $gray-6;
+          margin: 0 0 3.5rem 0;
+        }
+
+        .option__text {
+          font-size: 0.875rem;
+          line-height: 2.5625;
+          font-weight: 400;
+          font-family: $font-open-sans;
+          letter-spacing: 0;
+          color: $black;
+          margin: 0 0 1.25rem 0;
+
+          &.option__ticker {
+            &:before {
+              content: "";
+              display: inline-block;
+              background-image: url("../images/checkmark.svg");
+              background-size: 0.3125rem 0.3125rem;
+              background-repeat: no-repeat;
+              background-position: center;
+              width: 0.6875rem;
+              height: 0.6875rem;
+              border: 0.0625rem solid $green-dark;
+              border-radius: 0.125rem;
+              margin-right: 0.3125rem;
+            }
+          }
+
+          &.option__not {
+            &:before {
+              content: "x";
+              color: $pink-4;
+              display: inline-flex;
+              justify-content: center;
+              align-items: center;
+              font-family: $font-raleway;
+              font-size: 0.5625rem;
+              width: 0.6875rem;
+              height: 0.6875rem;
+              border: 0.0625rem solid $pink-4;
+              margin: 0 0.3125rem 0 0;
+              padding: 0;
+              border-radius: 0.125rem;
+            }
+          }
+        }
+        .pricing__btn {
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          transform: translate(-50%, 50%);
+          display: inline-block;
+          background: $pink-4;
+          padding: 0.53125rem 3.5625rem;
+          border-radius: 1.4375rem;
+          font-size: 0.8125rem;
+          line-height: 2.5625;
+          font-weight: 700;
+          font-family: $font-open-sans;
+          text-decoration: none;
+          letter-spacing: 0;
+          color: $white;
+
+          &.pricing__btn--pro {
+            background-color: $blue-light;
+            padding: 0.53125rem 4rem;
+          }
+
+          &.pricing__btn--premium {
+            background-color: $green-dark;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,103 @@
+.stats {
+  background-color: $white;
+  margin: 0 0 14.125rem 0;
+
+  .stats__inner {
+    width: 100%;
+    max-width: $max-width;
+    display: flex;
+    margin-inline: auto;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -5rem;
+
+    .stats__hdl {
+      margin: 7.75rem 0 0 0;
+      color: $black;
+      font-size: 2.25rem;
+      line-height: 1.1666;
+      letter-spacing: 0;
+      font-weight: 400;
+      font-family: $font-raleway;
+    }
+    .stats__container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      column-gap: 11.5rem;
+
+      .stats__content {
+        width: 100%;
+        max-width: 11rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 6.3125rem 0 0 0;
+
+        .content__circle {
+          position: relative;
+          display: block;
+          background-color: $pink-3;
+          width: 3.919375rem;
+          height: 3.919375rem;
+          border-radius: 3.919375rem;
+          margin-bottom: 0.8125rem;
+
+          .content__img {
+            position: absolute;
+            top: 50%;
+            transform: translate(70%, -50%);
+
+            &.content__img--blue {
+              transform: translate(32%, -50%);
+            }
+            &.content__img--green {
+              transform: translate(65%, -50%);
+            }
+
+          }
+
+          &.content__circle--blue {
+            background-color: $blue-dark;
+          }
+
+          &.content__circle--green {
+            background-color: $green-dark;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.stats__content .content__count {
+  color: $black;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 800;
+  letter-spacing: 0.3725rem;
+  text-align: center;
+  margin: 0 0 1.1875rem 0;
+}
+.stats__content .content__desc {
+  color: $gray-3;
+  font-size: 1.0625rem;
+  line-height: 1.25;
+  font-family: 'Raleway', sans-serif;
+  letter-spacing: 0;
+  text-align: center;
+  margin:0;
+}

@@ -1,0 +1,52 @@
+.footer {
+  background-color: $white-dark;
+  box-shadow: 0 -0.3125rem 2.5rem $gray-2;
+  margin-top: 3.6875rem;
+
+  .footer__inner {
+    max-width: $max-width;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+
+    .footer__left {
+
+      .logo {
+        font-family: $font-raleway;
+        font-size: 1.625rem;
+        line-height: 1.1538;
+        font-weight: 300;
+        letter-spacing: 0;
+        color: $blue-dark;
+        margin:0;
+        padding: 1.25rem 0 0.4375rem 0;
+      }
+      .copyright {
+        font-family: $font-open-sans;
+        font-size: 0.6875rem;
+        line-height: 1.3636;
+        font-weight: 400;
+        letter-spacing: 0;
+        color: $gray-3;
+        margin:0;
+        padding: 0 0 1.0625rem 0;
+      }
+    }
+    .footer__right {
+      display: flex;
+      align-self: center;
+      column-gap: 1.25rem;
+
+      .logo__outer {
+        display: block;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+

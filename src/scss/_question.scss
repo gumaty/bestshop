@@ -1,0 +1,193 @@
+.question {
+  margin-bottom: 2.5rem;
+
+  .question__inner {
+    width: 100%;
+    max-width: 56rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+
+    .question__info {
+
+      .info__hdl {
+        margin: 0 0 1.375rem 0;
+        font-family: $font-raleway;
+        font-size: 3.0625rem;
+        line-height: 1.163;
+        color: $black;
+      }
+
+      .info__lead {
+        margin: 0 0 2.625rem 0;
+        font-family: $font-open-sans;
+        font-size: 1rem;
+        line-height: 1.375;
+        color: $black;
+      }
+
+      .info__contact {
+        display: flex;
+        justify-content: space-between;
+
+        .info__email {
+          position: relative;
+          padding-left: 2.3125rem;
+          text-decoration: none;
+          margin: 0;
+          font-family: $font-open-sans;
+          font-size: 1rem;
+          line-height: 1.375;
+          font-weight: 600;
+          color: $gray-3;
+          letter-spacing: 0;
+
+          &:before {
+            position: absolute;
+            left: 0;
+            top: -0.125rem;
+            content: url("../images/mail_icon.svg");
+            margin-right: 0.625rem;
+          }
+        }
+
+        .info__phone {
+          margin: 0;
+          padding-right: 0.625rem;
+          font-family: $font-open-sans;
+          font-size: 1rem;
+          line-height: 1.375;
+          font-weight: 600;
+          color: $gray-3;
+          letter-spacing: 0;
+          position: relative;
+
+          &:before {
+            position: absolute;
+            left: -2.1875rem;
+            content: url("../images/phone_icon.svg");
+            margin-right: 0.625rem;
+          }
+        }
+
+
+      }
+    }
+
+    .question__form {
+      width: 100%;
+      max-width: 27.5rem;
+
+      .contactForm {
+        display: flex;
+        flex-direction: column;
+
+        .name__lbl {
+          margin: 0;
+          font-family: $font-open-sans;
+          font-size: 0.6875rem;
+          font-weight: 700;
+          line-height: 1.3636;
+          letter-spacing: 0.205rem;
+          text-transform: uppercase;
+          color: $blue-dark;
+        }
+
+        .name_input {
+          height: 1.875rem;
+          border: none;
+          border-bottom: 0.1875rem solid $gray-2;
+          margin-bottom: 1.875rem;
+        }
+
+        .email__lbl {
+          margin: 0;
+          font-family: $font-open-sans;
+          font-size: 0.6875rem;
+          font-weight: 700;
+          line-height: 1.3636;
+          letter-spacing: 0.205rem;
+          text-transform: uppercase;
+          color: $blue-dark;
+        }
+
+        .email__input {
+          height: 1.875rem;
+          border: none;
+          border-bottom: 0.1875rem solid $gray-2;
+          margin-bottom: 1.875rem;
+        }
+
+        .contactForm__checkbox {
+          .checkbox__lbl {
+            position: relative;
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0 0 20px 34px;
+            font-family: $font-open-sans;
+            font-size: 0.75rem;
+            font-weight: 400;
+            line-height: 1.4167;
+            color: $gray-5;
+            cursor: pointer;
+
+            input[type="checkbox"] {
+              position: absolute;
+              opacity: 0;
+              cursor: pointer;
+
+              &:checked + .checkbox-icon::before {
+                content: "\2714";
+                display: block;
+                font-size: 16px;
+                color: #08A6E4;
+                text-align: center;
+                line-height: 20px;
+              }
+
+              &:checked + .checkbox-icon {
+              }
+            }
+
+            .checkbox-icon {
+              position: absolute;
+              top: 0;
+              left: -34px;
+              display: block;
+              width: 24px;
+              height: 24px;
+              background-color: #fff;
+              border: 1px solid #95989A;
+              border-radius: 4px;
+            }
+          }
+        }
+
+        .contactForm__btn {
+          display: inline-block;
+          align-self: flex-end;
+          padding: 1.25rem 6.0625rem;
+          background-color: $blue-dark;
+          font-family: $font-open-sans;
+          font-size: 0.8125rem;
+          line-height: 1.3846;
+          font-weight: 700;
+          color: white;
+          border: 0;
+          box-shadow: 0.3125rem 0.625rem 0.875rem $green-light;
+          border-radius: 2.1875rem;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
