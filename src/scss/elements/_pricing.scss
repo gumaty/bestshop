@@ -17,7 +17,7 @@
       line-height: 1.1666;
       letter-spacing: 0rem;
       font-weight: 400;
-      font-family: $font-raleway;
+      font-family: $font-secondary;
       margin: 0 0 1.875rem 0;
     }
 
@@ -102,7 +102,7 @@
             font-size: 0.75rem;
             line-height: 0.0625;
             font-weight: 700;
-            font-family: $font-raleway;
+            font-family: $font-secondary;
             letter-spacing: 0;
             color: $gray-6;
             margin: 0 0 3.5rem 0;
@@ -116,7 +116,7 @@
             font-size: 0.875rem;
             line-height: 2.25;
             font-weight: 400;
-            font-family: $font-open-sans;
+            font-family: $font-primary;
             letter-spacing: 0;
             color: $black;
             margin: 0 0 1.25rem 0;
@@ -148,7 +148,7 @@
                 display: inline-flex;
                 justify-content: center;
                 align-items: center;
-                font-family: $font-raleway;
+                font-family: $font-secondary;
                 font-size: 0.5625rem;
                 width: 0.6875rem;
                 height: 0.6875rem;
@@ -174,7 +174,7 @@
           font-size: 0.8125rem;
           line-height: 2.5625;
           font-weight: 700;
-          font-family: $font-open-sans;
+          font-family: $font-primary;
           text-decoration: none;
           letter-spacing: 0;
           color: $white;
