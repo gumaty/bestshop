@@ -10,7 +10,14 @@
     align-items: flex-start;
     gap: 1rem;
 
+    @media (max-width: 1024px) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 30px;
+    }
+
     .question__info {
+      width: 100%;
 
       .info__hdl {
         margin: 0 0 1.375rem 0;
@@ -32,6 +39,12 @@
         display: flex;
         justify-content: space-between;
 
+        @media (max-width: 1024px) {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 10px;
+        }
+
         .info__email {
           position: relative;
           padding-left: 2.3125rem;
@@ -43,6 +56,8 @@
           font-weight: 600;
           color: $gray-3;
           letter-spacing: 0;
+
+
 
           &:before {
             position: absolute;
@@ -64,11 +79,19 @@
           letter-spacing: 0;
           position: relative;
 
+          @media (max-width: 1024px) {
+            padding-left: 2.3125rem;
+          }
+
           &:before {
             position: absolute;
             left: -2.1875rem;
             content: url("../images/phone_icon.svg");
             margin-right: 0.625rem;
+
+            @media (max-width: 1024px) {
+              left: 0;
+            }
           }
         }
 
@@ -79,6 +102,11 @@
     .question__form {
       width: 100%;
       max-width: 27.5rem;
+
+      @media (max-width: 1024px) {
+        max-width: 100%;
+
+      }
 
       .contactForm {
         display: flex;
@@ -96,9 +124,9 @@
         }
 
         .name_input {
-          height: 1.875rem;
+          height: 2.8125rem;
           border: none;
-          border-bottom: 0.1875rem solid $gray-2;
+          border-bottom: 0.0625rem solid $gray-3;
           margin-bottom: 1.875rem;
         }
 
@@ -114,9 +142,9 @@
         }
 
         .email__input {
-          height: 1.875rem;
+          height: 2.8125rem;
           border: none;
-          border-bottom: 0.1875rem solid $gray-2;
+          border-bottom: 0.0625rem solid $gray-3;
           margin-bottom: 1.875rem;
         }
 
