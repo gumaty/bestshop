@@ -13,6 +13,7 @@
     .header__logo {
       display: inline-block;
       font-family: $font-raleway;
+      padding: 1.5625rem 1.5625rem;
       font-weight: 300;
       font-size: 2rem;
       line-height: 1.15625;
@@ -28,7 +29,7 @@
         border-bottom: 0.25rem solid $white;
         padding: 1.5625rem 0.7468rem;
         margin-top: 0.0625rem;
-        margin-left: 4.44375rem;
+        margin-left: 3.25rem;
         text-decoration: none;
         color: $gray-3;
         text-align: center;
@@ -39,6 +40,13 @@
         letter-spacing: 0.205rem;
         text-transform: uppercase;
         transition: all 400ms ease-in-out;
+        &:first-of-type {
+          margin-left: 0;
+        }
+
+        @media (max-width: 792px) {
+          display: none;
+        }
 
         &:hover {
           color: $black;

@@ -1,31 +1,35 @@
 .stats {
   background-color: $white;
-  margin: 0 0 14.125rem 0;
+  margin: 100px 0 0 0;
 
   .stats__inner {
     width: 100%;
-    max-width: $max-width;
+    max-width: $width-stats;
     display: flex;
     margin-inline: auto;
     flex-direction: column;
     align-items: center;
-    margin-top: -5rem;
 
     .stats__hdl {
-      margin: 7.75rem 0 0 0;
       color: $black;
       font-size: 2.25rem;
       line-height: 1.1666;
       letter-spacing: 0;
       font-weight: 400;
       font-family: $font-raleway;
+      text-align: center;
     }
     .stats__container {
       width: 100%;
       display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      column-gap: 11.5rem;
+      justify-content: space-between;
+      margin: 6.25rem 0 7.5rem;
+
+      @media (max-width: 792px) {
+        flex-direction: column;
+        align-items: center;
+        margin: 2.1875rem 0 50px;
+      }
 
       .stats__content {
         width: 100%;
@@ -33,7 +37,10 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin: 6.3125rem 0 0 0;
+
+        @media (max-width: 792px) {
+          margin: 0 0 2.1875rem 0;
+        }
 
         .content__circle {
           position: relative;
@@ -66,38 +73,28 @@
             background-color: $green-dark;
           }
         }
+
+        .content__count {
+          color: $black;
+          font-size: 1.25rem;
+          line-height: 1.5;
+          font-family: $font-raleway;
+          font-weight: 800;
+          letter-spacing: 0.3725rem;
+          text-align: center;
+          margin: 0 0 1.1875rem 0;
+        }
+
+        .content__desc {
+          color: $gray-3;
+          font-size: 1.0625rem;
+          line-height: 1.25;
+          font-family: $font-raleway;
+          letter-spacing: 0;
+          text-align: center;
+          margin:0;
+        }
       }
     }
   }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-.stats__content .content__count {
-  color: $black;
-  font-size: 1.25rem;
-  line-height: 1.5;
-  font-family: 'Raleway', sans-serif;
-  font-weight: 800;
-  letter-spacing: 0.3725rem;
-  text-align: center;
-  margin: 0 0 1.1875rem 0;
-}
-.stats__content .content__desc {
-  color: $gray-3;
-  font-size: 1.0625rem;
-  line-height: 1.25;
-  font-family: 'Raleway', sans-serif;
-  letter-spacing: 0;
-  text-align: center;
-  margin:0;
 }
