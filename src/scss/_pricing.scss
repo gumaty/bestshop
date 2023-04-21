@@ -23,15 +23,22 @@
 
     .priceList {
       width: 100%;
+      padding: 0 20px;
       display: flex;
       flex-direction: row;
-      justify-content: center;
+      justify-content: space-between;
       align-items: center;
-      flex-wrap: wrap;
-      column-gap: 3.625rem;
+      gap: 20px;
+
+      @media (max-width: 1024px) {
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+      }
 
       .pricing__option {
-        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
         width: 100%;
         max-width: 23.25rem;
         height: calc(100% * 1.24);
@@ -40,6 +47,15 @@
         border: 0.0625rem solid $pink-3;
         border-radius: 1.125rem;
         text-align: center;
+
+        @media (max-width: 1024px) {
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+          gap: 30px;
+          padding: 25px 10px 35px;
+        }
+
 
         &.pricing__option--pro {
           width: 100%;
@@ -59,82 +75,93 @@
             margin: 0 0 4.1875rem 0;
           }
         }
-
-        .option__name {
-          font: normal normal bold 1.25rem/0.0625rem Raleway;
-          letter-spacing: 0;
-          color: $gray-6;
-          margin: 2.125rem 0 2.875rem 0;
-        }
-
-        .option__price {
-          font: normal normal 300 2.875rem/0.125rem Open Sans;
-          letter-spacing: 0;
-          color: $pink-3;
-          margin: 0 0 1.875rem 0;
-
-          &.option__price--pro {
-            color: $blue-light;
+        .option__hdr {
+          .option__name {
+            font: normal normal bold 1.25rem/0.0625rem Raleway;
+            letter-spacing: 0;
+            color: $gray-6;
+            margin: 2.125rem 0 2.875rem 0;
           }
 
-          &.option__price--premium {
-            color: $green-dark;
-          }
-        }
+          .option__price {
+            font: normal normal 300 2.875rem/0.125rem Open Sans;
+            letter-spacing: 0;
+            color: $pink-3;
+            margin: 0 0 1.875rem 0;
 
-        .option__remark {
-          font-size: 0.75rem;
-          line-height: 0.0625;
-          font-weight: 700;
-          font-family: $font-raleway;
-          letter-spacing: 0;
-          color: $gray-6;
-          margin: 0 0 3.5rem 0;
-        }
+            &.option__price--pro {
+              color: $blue-light;
+            }
 
-        .option__text {
-          font-size: 0.875rem;
-          line-height: 2.5625;
-          font-weight: 400;
-          font-family: $font-open-sans;
-          letter-spacing: 0;
-          color: $black;
-          margin: 0 0 1.25rem 0;
-
-          &.option__ticker {
-            &:before {
-              content: "";
-              display: inline-block;
-              background-image: url("../images/checkmark.svg");
-              background-size: 0.3125rem 0.3125rem;
-              background-repeat: no-repeat;
-              background-position: center;
-              width: 0.6875rem;
-              height: 0.6875rem;
-              border: 0.0625rem solid $green-dark;
-              border-radius: 0.125rem;
-              margin-right: 0.3125rem;
+            &.option__price--premium {
+              color: $green-dark;
             }
           }
 
-          &.option__not {
-            &:before {
-              content: "x";
-              color: $pink-4;
-              display: inline-flex;
-              justify-content: center;
-              align-items: center;
-              font-family: $font-raleway;
-              font-size: 0.5625rem;
-              width: 0.6875rem;
-              height: 0.6875rem;
-              border: 0.0625rem solid $pink-4;
-              margin: 0 0.3125rem 0 0;
-              padding: 0;
-              border-radius: 0.125rem;
+          .option__remark {
+            font-size: 0.75rem;
+            line-height: 0.0625;
+            font-weight: 700;
+            font-family: $font-raleway;
+            letter-spacing: 0;
+            color: $gray-6;
+            margin: 0 0 3.5rem 0;
+          }
+
+        }
+
+        .option__texts {
+
+          .option__text {
+            font-size: 0.875rem;
+            line-height: 2.25;
+            font-weight: 400;
+            font-family: $font-open-sans;
+            letter-spacing: 0;
+            color: $black;
+            margin: 0 0 1.25rem 0;
+
+            @media (max-width: 1024px) {
+              margin: 0;
+            }
+
+            &.option__ticker {
+              &:before {
+                content: "";
+                display: inline-block;
+                background-image: url("../images/checkmark.svg");
+                background-size: 0.3125rem 0.3125rem;
+                background-repeat: no-repeat;
+                background-position: center;
+                width: 0.6875rem;
+                height: 0.6875rem;
+                border: 0.0625rem solid $green-dark;
+                border-radius: 0.125rem;
+                margin-right: 0.3125rem;
+              }
+            }
+
+            &.option__not {
+              &:before {
+                content: "x";
+                color: $pink-4;
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                font-family: $font-raleway;
+                font-size: 0.5625rem;
+                width: 0.6875rem;
+                height: 0.6875rem;
+                border: 0.0625rem solid $pink-4;
+                margin: 0 0.3125rem 0 0;
+                padding: 0;
+                border-radius: 0.125rem;
+              }
             }
           }
         }
+
+
         .pricing__btn {
           position: absolute;
           bottom: 0;

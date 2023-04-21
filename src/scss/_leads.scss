@@ -4,22 +4,29 @@
 
   .leads__inner {
     width: 100%;
-    padding-top: 6.5625rem;
     background-color: $white-dark;
     max-width: $max-width;
     display: flex;
     margin-inline: auto;
+    padding: 6.5625rem 30px 0 30px;
     flex-direction: column;
     align-items: center;
 
     .leads__content {
-      width: 70.25rem;
-      margin:0 0 2.3125rem 0;
+      max-width: 70.25rem;
+      width: 100%;
+      margin: 0 0 2.3125rem 0;
       background-color: $white;
       display: flex;
       justify-content: space-between;
       border: 0.0625rem solid $gray-1;
       border-radius: 0.3125rem;
+
+      @media (max-width: 1024px) {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
 
       &.leads__content--right {
         flex-direction: row-reverse;
@@ -110,46 +117,47 @@
           &.leads__content--transparent {}
         }
       }
-    }
-    .img_container {
-      position: relative;
+      .img_container {
+        position: relative;
 
-      .content__leadImgSquare {
-        position: absolute;
-        display: block;
-        top: 4.6875rem;
-        right: 6.75rem;
-        width: 11.25rem;
-        height: 11.25rem;
-        transform: rotate(45deg);
-        background: $pink-3;
-        border-radius: 2.5625rem;
-        z-index: 10;
-      }
+        .content__leadImgSquare {
+          position: absolute;
+          display: block;
+          top: 4.6875rem;
+          right: 6.75rem;
+          width: 11.25rem;
+          height: 11.25rem;
+          transform: rotate(45deg);
+          background: $pink-3;
+          border-radius: 2.5625rem;
+          z-index: 10;
+        }
 
-      .content__leadImgCircle {
-        position: absolute;
-        top: 0.75rem;
-        left: 4.375rem;
-        width: 20rem;
-        height: 20rem;
-        background: $blue-light;
-        border-radius: 50%;
-      }
+        .content__leadImgCircle {
+          position: absolute;
+          top: 0.75rem;
+          left: 4.375rem;
+          width: 20rem;
+          height: 20rem;
+          background: $blue-light;
+          border-radius: 50%;
+        }
 
-      .content__leadImg {
-        position: absolute;
-        z-index: 1000;
-        bottom: 2.375rem;
-        right: 7.3475rem;
-
-        &.content__leadImg--left {
+        .content__leadImg {
           position: absolute;
           z-index: 1000;
-          bottom: 0.8125rem;
-          left: 4.375rem;
+          bottom: 2.375rem;
+          right: 7.3475rem;
+
+          &.content__leadImg--left {
+            position: absolute;
+            z-index: 1000;
+            bottom: 0.8125rem;
+            left: 4.375rem;
+          }
         }
-      }
+    }
+
     }
   }
 }

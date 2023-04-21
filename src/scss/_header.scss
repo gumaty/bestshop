@@ -44,7 +44,7 @@
           margin-left: 0;
         }
 
-        @media (max-width: 792px) {
+        @media (max-width: $brk-pt-2) {
           display: none;
         }
 
