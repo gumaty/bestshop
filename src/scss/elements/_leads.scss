@@ -12,7 +12,7 @@
     flex-direction: column;
     align-items: center;
 
-    @media (max-width: 1024px) {
+    @include for-desktop {
       padding: 3.125rem 30px 0 30px;
     }
 
@@ -27,7 +27,7 @@
       border: 0.0625rem solid $gray-1;
       border-radius: 0.3125rem;
 
-      @media (max-width: 1024px) {
+      @include for-desktop {
         max-width: 100%;
         flex-direction: column-reverse;
         justify-content: center;
@@ -37,12 +37,13 @@
       &.leads__content--right {
         flex-direction: row-reverse;
 
-        @media (max-width: 1024px) {
+        @include for-desktop {
           max-width: 100%;
           flex-direction: column-reverse;
           justify-content: center;
           align-items: center;
         }
+
       }
 
       &.leads__content--transparent {
@@ -50,11 +51,11 @@
         column-gap: 3.8125rem;
         border: 0;
 
-        @media (max-width: 1024px) {
+        @include for-desktop {
           max-width: 100%;
           flex-direction: column;
-
         }
+
       }
 
       .content__leadText {
@@ -62,10 +63,9 @@
         max-width: 26rem;
         margin: 5.6875rem 2.1875rem;
 
-        @media (max-width: 1024px) {
+        @include for-desktop {
           max-width: 100%;
           margin: 1.875rem 2.1875rem;
-
         }
 
         .lead__hdl {
@@ -87,14 +87,14 @@
           color: $black;
           margin: 0 0 3.125rem 0;
 
-          @media (max-width: 1024px) {
+          @include for-desktop {
             margin: 0;
           }
 
           &.lead__text--lower {
             margin: 0 0 2.75rem 0;
 
-            @media (max-width: 1024px) {
+            @include for-desktop {
               margin: 0;
             }
           }
@@ -109,9 +109,10 @@
           width: 79%;
           border-bottom: 0.25rem solid $pink-3;
 
-          @media (max-width: 1024px) {
+          @include for-desktop {
             display: none;
           }
+
         }
 
         &.content__leadText--right {
@@ -132,7 +133,7 @@
           border-radius: 0.3125rem;
           padding: 4.375rem 2.1875rem;
 
-          @media (max-width: 1024px) {
+          @include for-desktop {
             height: auto;
             max-width: 100%;
             padding: 3.125rem 2.1875rem;
@@ -158,7 +159,7 @@
         border: 0.0625rem solid $gray-1;
         border-radius: 0.3125rem;
 
-        @media (max-width: 1024px) {
+        @include for-desktop {
           width: 100%;
           display: flex;
           justify-content: center;
@@ -168,7 +169,7 @@
         .content__leadImgSingle {
           margin: 6.125rem 5.125rem 4rem 3.875rem;
 
-          @media (max-width: 1024px) {
+          @include for-desktop {
             margin: 0;
             margin-top: 55px;
           }
@@ -183,7 +184,7 @@
         background: transparent;
         margin-right: 80px;
 
-        @media (max-width: 1024px) {
+        @include for-desktop {
           margin-right: 0;
           margin-top: 40px;
         }
@@ -192,10 +193,11 @@
           margin-right: 0;
           margin-left: 60px;
 
-          @media (max-width: 1024px) {
+          @include for-desktop {
             margin-left: 0;
             margin-top: 30px;
           }
+
         }
 
         .content__leadImg {
@@ -204,7 +206,7 @@
           height: auto;
           z-index: 2;
 
-          @media (max-width: 1024px) {
+          @include for-desktop {
             width: 192px;
           }
 
@@ -213,9 +215,10 @@
             height: auto;
             z-index: 2;
 
-            @media (max-width: 1024px) {
+            @include for-desktop {
               width: 175px;
             }
+
           }
         }
 
@@ -231,12 +234,13 @@
           border-radius: 2.5625rem;
           z-index: 1;
 
-          @media (max-width: 1024px) {
+          @include for-desktop {
             width: 90px;
             height: 90px;
             left: 110px;
             top: -30px
           }
+
         }
 
         .content__leadImgCircle {
@@ -249,12 +253,13 @@
           border-radius: 50%;
           z-index: 1;
 
-          @media (max-width: 1024px) {
+          @include for-desktop {
             width: 131px;
             height: 131px;
             left: 0;
             top: -15px
           }
+
         }
       }
     }

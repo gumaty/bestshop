@@ -25,7 +25,7 @@
       justify-content: space-between;
       margin: 6.25rem 0 7.5rem;
 
-      @media (max-width: $brk-pt-2) {
+      @include for-tablets {
         flex-direction: column;
         align-items: center;
         margin: 2.1875rem 0 50px;
@@ -38,9 +38,10 @@
         flex-direction: column;
         align-items: center;
 
-        @media (max-width: $brk-pt-2) {
+        @include for-tablets {
           margin: 0 0 2.1875rem 0;
         }
+
 
         .content__circle {
           position: relative;
