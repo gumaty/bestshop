@@ -107,6 +107,54 @@
     }
   }
 
+  //początek mojej wstawki
+
+  .checkbox__lbl {
+    position: relative;
+    display: block;
+    vertical-align: middle;
+    margin: 0 0 20px 34px;
+    font-family: $font-primary;
+    font-size: 0.75rem;
+    font-weight: 400;
+    line-height: 1.4167;
+    color: $gray-5;
+    cursor: pointer;
+
+    input[type="checkbox"] {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+
+      &:checked + .checkbox-icon::before {
+        content: "\2714";
+        display: block;
+        font-size: 16px;
+        color: #08A6E4;
+        text-align: center;
+        line-height: 20px;
+      }
+
+      &:checked + .checkbox-icon {
+      }
+    }
+
+    .checkbox-icon {
+      position: absolute;
+      top: 0;
+      left: -34px;
+      display: block;
+      width: 24px;
+      height: 24px;
+      background-color: #fff;
+      border: 1px solid #95989A;
+      border-radius: 4px;
+    }
+  }
+
+  // koniec mojej wstawki
+
+
   .form__checkbox {
     .consent__text {
       padding-top: 4px;
@@ -133,7 +181,7 @@
       align-items: center;
       color: $white;
       font-size: 0.875rem;
-      display: block;  //tu zmienić na none
+      display: none;  //tu zmienić na none
 
       &.open {
         display: flex;
