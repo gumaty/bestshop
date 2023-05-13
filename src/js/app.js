@@ -39,6 +39,27 @@ let productValue = 0;
 let orderValue = 0;
 let tempAccountingPrice = 0;
 let tempTerminalPrice = 0;
+
+function setPackage(item, variable) {
+    packageBox.style.display = "flex";
+    summaryBox.style.display = "flex";
+    packageOption.innerText = item.innerText;
+    selectDescription.innerHTML = item.innerHTML;
+    packagePrice.innerText = `$${variable}`;
+    packageValue = variable;
+}
+
+function priceSummary() {
+    sum = productValue + orderValue + packageValue + tempTerminalPrice + tempAccountingPrice;
+
+    if ((qtyOrderValue.length === 0) && (qtyProductValue.length === 0) && (accountingCheckbox.checked === false) && (terminalCheckbox.checked === false)) {
+        summaryBox.style.display = "none";
+    } else {
+        summaryBox.style.display = "flex";
+        summaryPrice.innerText = `$${sum}`;
+    }
+}
+
 packageSelect.addEventListener('click', function () {
     packageSelect.classList.toggle("open");
 })
@@ -47,36 +68,22 @@ selectItems.forEach(function (element) {
 
     element.addEventListener('click', function () {
 
-
-        packageBox.style.display = "flex";
-
         if (element.innerText === "Basic") {
-            summaryBox.style.display = "flex";
-            packageOption.innerText = element.innerText;
-            selectDescription.innerHTML = element.innerHTML;
-            packagePrice.innerText = `$${basicPrice}`;
-            packageValue = basicPrice;
-        } else if (element.innerText === "Professional") {
-            summaryBox.style.display = "flex";
-            packageOption.innerText = element.innerText;
-            selectDescription.innerHTML = element.innerHTML;
-            packagePrice.innerText = `$${profiPrice}`;
-            packageValue = profiPrice;
-        } else if (element.innerText === "Premium") {
-            summaryBox.style.display = "flex";
-            packageOption.innerText = element.innerText;
-            selectDescription.innerHTML = element.innerHTML;
-            packagePrice.innerText = `$${premiumPrice}`;
-            packageValue = premiumPrice;
-        }
-        sum = productValue + orderValue + packageValue + tempTerminalPrice + tempAccountingPrice;
 
-        if ((qtyOrderValue.length === 0) && (qtyProductValue.length === 0) && (accountingCheckbox.checked === false) && (terminalCheckbox.checked === false)) {
-            summaryBox.style.display = "none";
-        } else {
-            summaryBox.style.display = "flex";
-            summaryPrice.innerText = `$${sum}`;
+            setPackage(element, basicPrice);
+
+        } else if (element.innerText === "Professional") {
+
+            setPackage(element, profiPrice);
+
+        } else if (element.innerText === "Premium") {
+
+            setPackage(element, premiumPrice);
+
         }
+
+        priceSummary();
+
     })
 })
 
@@ -92,14 +99,14 @@ form.addEventListener('input', function (event) {
     ordersValue.innerText = `${Math.ceil(qtyOrderValue)} * $${orderPrice}`;
     ordersPrice.innerText = `$${orderValue}`;
 
-    if (qtyProductValue.length == 0) {
+    if (qtyProductValue.length === 0) {
         productsBox.style.display = "none";
     } else {
         productsBox.style.display = "flex";
     }
 
 
-    if (qtyOrderValue.length == 0) {
+    if (qtyOrderValue.length === 0) {
         ordersBox.style.display = "none";
     } else {
         ordersBox.style.display = "flex";
@@ -125,15 +132,6 @@ form.addEventListener('input', function (event) {
         accountingBox.style.display = 'flex';
     }
 
-    sum = productValue + orderValue + packageValue + tempTerminalPrice + tempAccountingPrice;
+    priceSummary();
 
-    if ((qtyOrderValue.length === 0) && (qtyProductValue.length === 0) && (accountingCheckbox.checked === false) && (terminalCheckbox.checked === false)) {
-        summaryBox.style.display = "none";
-    } else {
-        summaryBox.style.display = "flex";
-        summaryPrice.innerText = `$${sum}`;
-    }
 })
-
-
-
